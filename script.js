@@ -1,4 +1,5 @@
 // script.js
+// script.js
 let startTime = 0;
 let elapsedTime = 0;
 let timerInterval;
@@ -37,7 +38,9 @@ function startPause() {
     timerInterval = setInterval(() => {
       elapsedTime = Date.now() - startTime;
       const [main, ms] = timeToString(elapsedTime).split('.');
-      document.getElementById('time-main').textContent = main;
+      const [hh, mm, ss] = main.split(':');
+      document.getElementById('time-hour').textContent = `${hh}:`;
+      document.getElementById('time-minsec').textContent = `${mm}:${ss}`;
       document.getElementById('time-ms').textContent = '.' + ms;
     }, 10);
     isRunning = true;
@@ -55,8 +58,10 @@ function reset() {
   elapsedTime = 0;
   isRunning = false;
 
-  document.getElementById('time-main').textContent = "00:00:00";
+  document.getElementById('time-hour').textContent = "00:";
+  document.getElementById('time-minsec').textContent = "00:00";
   document.getElementById('time-ms').textContent = ".00";
+
   document.getElementById('start-btn').textContent = "Start";
   document.getElementById('laps').innerHTML = "";
 

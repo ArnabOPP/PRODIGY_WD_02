@@ -149,4 +149,4 @@ function toggleFullscreen() {
       }
     }
 
-    typeQuote(); // Start the typing effect
+    typeQuote();

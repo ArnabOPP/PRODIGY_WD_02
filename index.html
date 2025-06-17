@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRODIGY_WD_02</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="backdrop"></div>
+
+  <div class="foreground">
+    <div class="header"><span id="quote" class="typing"></span></div>
+
+  <div class="controls">
+    <button onclick="toggleFullscreen()">⛶</button>
+    <button onclick="toggleSettings()">⚙️</button>
+  </div>
+
+  <div id="settings-panel">
+    <h2>Themes</h2>
+    <img src="000001.png" class="theme-thumbnail" onclick="changeBackground('hq720.jpg')">
+    <img src="000003.png" class="theme-thumbnail" onclick="changeBackground('hq21.jpg')">
+    <img src="000000.png" class="theme-thumbnail" onclick="changeBackground('hq22.jpg')">
+  </div>
+  <div class="container">
+    <div id="display">
+    <span id="time-main">00:00:00</span><span id="time-ms">.00</span>
+    </div>
+    <div class="buttons">
+      <button id="start-btn" onclick="startPause()">Start</button>
+      <button id="lap-btn" onclick="lap()">Lap</button>
+      <button id="reset-btn" onclick="reset()">
+        <img id="reset-icon" src="reboot.png" alt="Reset" width="45" height="45" />
+      </button>
+    </div>
+    <ul id="laps"></ul>
+  </div>
+
+  <div class="footer">
+  <div class="footer-left">© ARNAB CHATTERJEE | All rights reserved.</div>
+</div>
+
+  <script src="script.js"></script>
+  </div>
+</body>
+</html>

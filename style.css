@@ -1,0 +1,252 @@
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('hq720.jpg'); /* 🔁 Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.foreground {
+  position: relative;
+  z-index: 1;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.303); /* dark overlay */
+  z-index: 0;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.container {
+  background-color: transparent; /* white with 70% opacity */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: transparent;
+  text-align: center;
+  color: white;
+}
+
+#display {
+  font-size: 3em;
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#laps {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+#laps li {
+  text-align: left;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+#time-main {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#time-ms {
+  font-size: 1.5em;
+  font-weight: bold;
+  vertical-align: super;
+  margin-left: 5px;
+}
+
+#time-main, #time-ms {
+  font-weight: bold;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6); /* subtle shadow */
+  -webkit-text-stroke: 0.5px black; /* text border for supported browsers */
+  color: white; /* or your preferred color */
+}
+
+#time-main {
+  font-size: 3.5em;
+}
+
+#time-ms {
+  font-size: 1.5em;
+  vertical-align: super;
+  margin-left: 5px;
+}
+
+#start-btn {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 130px; /* 👈 fixed width */
+  height: 50px;  /* 👈 fixed height */
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: black 0px 0px 10px rgba(0, 0, 0, 0.5); /* subtle shadow */
+}
+
+#start-btn:hover {
+  background-color: #0056b3;
+}
+
+#lap-btn {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: white 2px solid;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 130px; /* 👈 fixed width */
+  height: 50px;  /* 👈 fixed height */
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: black 0px 0px 10px rgba(0, 0, 0, 0.5); /* subtle shadow */
+}
+
+#lap-btn:hover {
+  background-color: #0056b3;
+  border: #0056b3 2px solid;
+}
+
+#reset-btn {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5em;
+  width: 50px; /* 👈 fixed width */
+  height: 50px;  /* 👈 fixed height */
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: black 0px 0px 10px rgba(0, 0, 0, 0.5); /* subtle shadow */
+}
+
+.header {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 27px;
+      font-weight: bold;
+      font-family: luminary ;
+      color: rgba(255, 255, 255, 0.563);
+      z-index: 1000;
+      border-left: 4px solid #e20d058f;
+      margin: 0em 0;
+      padding-left: 1em;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .controls button {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #settings-panel {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      width: 300px;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      color: white;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 9999;
+    }
+
+    #settings-panel.open {
+      right: 0;
+    }
+
+    .theme-thumbnail {
+      width: 100%;
+      margin-top: 10px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .theme-thumbnail:hover {
+      border-color: white;
+    }
+
+    .footer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.typing {
+      display: inline;
+      border-right: 2px solid #555;
+      white-space: nowrap;
+      overflow: hidden;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#reset-icon {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.spin-animation {
+  animation: spin 0.6s ease-in-out;
+}
